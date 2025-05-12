@@ -1,1 +1,31 @@
-<p>usp-section works!</p>
+<header >
+    <div>
+        <div class="header-text">
+            <h1>USP Section</h1>
+        </div>
+    </div>
+</header>
+
+<main>
+    
+</main>
+<div class="container">
+     @for (item of cards; track $index) {
+    <div>
+        <div>
+            <div class="card">
+                <div class="card-items">
+                    <div class="cover">
+                        <i ngClass={{item.icon}}></i>
+                    </div>
+                    <div class="card-body">
+                        <h3>{{item.title}}</h3>
+                        <p>{{item.desc}}</p>
+                        <a href="#">Read more ></a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+}
+</div>

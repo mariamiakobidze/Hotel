@@ -1,1 +1,37 @@
-<p>hotels works!</p>
+<header>
+    <div class="container">
+        <div class="selectrooms">
+            <button>All</button>
+            <button>Tbilisi</button>
+            
+        </div>
+    </div>
+</header>
+
+<main>
+    <section>
+        <main>
+            <section>
+                <div class="container">
+                    <div>
+                         @for (item of hotels; track $index){
+                            <div class="card">
+                                <div class="card-items">
+                                    <img [src]="item.featuredImage"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body-top">
+                                        <div class="info">
+                                            <p class="card-text">{{item.name}}</p>
+                                        </div>
+                                        <button routerLink="/rooms">VIEW ROOMS</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </section>
+</main>

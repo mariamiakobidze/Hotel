@@ -4,6 +4,7 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { BookedRoomsComponent } from './booked-rooms/booked-rooms.component';
 import { RoomdetailsComponent } from './roomdetails/roomdetails.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 export const routes: Routes = [
     {path: "", component: HomeComponent},
@@ -11,4 +12,5 @@ export const routes: Routes = [
     {path:"hotels", component:HotelsComponent},
     {path:"bookedrooms", component:BookedRoomsComponent},
     {path:"roomdetails", component:RoomdetailsComponent},
+    {path: "**", component: NotfoundComponent},
 ];

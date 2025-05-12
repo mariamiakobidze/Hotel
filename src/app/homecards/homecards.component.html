@@ -1,1 +1,32 @@
-<p>homecards works!</p>
+<header class="mt-5">
+    <div>
+        <div class="header-text">
+            <h1>Guest Favourite Rooms</h1>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section>
+         @for (item of favouriteRooms; track $index) {
+            <div class="card">
+                <div class="card-items">
+                    <img src="{{item.images[0].source}}"
+                        class="card-img-top" alt="...">
+                    <div class="card-body-top">
+                        <div class="info">
+                            <p class="card-text">{{item.name}}</p>
+                            <div class="prices">
+                                <p class="price">{{item.pricePerNight}}</p>
+                                <p class="night">a night</p>
+                            </div>
+
+                        </div>
+                        <button routerLink="/roomdetails/{{item.id}}">BOOK NOW</button>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+</main>
